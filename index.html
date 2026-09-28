@@ -1064,7 +1064,7 @@
 
         <p>Thank you for being part of my universe,</p>
 
-        <p>And for the simple friendship we share.</p>
+        <p>And for the simple friendship and sibling bondwe share.</p>
 
         <p>Don't ever change for the world,</p>
 
@@ -1114,7 +1114,7 @@
 
             <article class="member-card">
                 <img
-                    src="https://iili.io/BTS-RM.jpg"
+                    src="https://i.ibb.co/HL5jDKNz/1.jpg"
                     alt="RM"
                     loading="lazy"
                     onerror="this.src='https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=500&q=80'">
@@ -1124,7 +1124,7 @@
 
             <article class="member-card">
                 <img
-                    src="https://iili.io/BTS-JIN.jpg"
+                    src="https://i.ibb.co/G3J2pvhR/2.jpg"
                     alt="Jin"
                     loading="lazy"
                     onerror="this.src='https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=500&q=80'">
@@ -1134,7 +1134,7 @@
 
             <article class="member-card">
                 <img
-                    src="https://iili.io/BTS-SUGA.jpg"
+                    src="https://i.ibb.co/x8M7F9ff/3.jpg"
                     alt="SUGA"
                     loading="lazy"
                     onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80'">
@@ -1144,7 +1144,7 @@
 
             <article class="member-card">
                 <img
-                    src="https://iili.io/BTS-JHOPE.jpg"
+                    src="https://i.ibb.co/VcCFGKQV/4.jpg"
                     alt="j-hope"
                     loading="lazy"
                     onerror="this.src='https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=500&q=80'">
@@ -1154,7 +1154,7 @@
 
             <article class="member-card">
                 <img
-                    src="https://iili.io/BTS-JIMIN.jpg"
+                    src="https://i.ibb.co/QvTJrgqm/5.jpg"
                     alt="Jimin"
                     loading="lazy"
                     onerror="this.src='https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=500&q=80'">
@@ -1164,7 +1164,7 @@
 
             <article class="member-card">
                 <img
-                    src="https://iili.io/BTS-V.jpg"
+                    src="https://i.ibb.co/8g4nqWhM/6.jpg"
                     alt="V"
                     loading="lazy"
                     onerror="this.src='https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=500&q=80'">
@@ -1174,7 +1174,7 @@
 
             <article class="member-card">
                 <img
-                    src="https://iili.io/BTS-JK.jpg"
+                    src="https://i.ibb.co/j9By2gzW/7.jpg"
                     alt="Jung Kook"
                     loading="lazy"
                     onerror="this.src='https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80'">
@@ -1247,649 +1247,649 @@
 
 <audio id="song" loop preload="auto">
     <source
-        src="https://files.catbox.moe/44idzk.mp3"
-        type="audio/mpeg">
-</audio>
-
-
-<script>
-
-    /* =========================================
-       LOADING
-    ========================================= */
-
-    window.addEventListener("load", () => {
-
-        setTimeout(() => {
-            document.getElementById("loading")
-                .classList.add("hide");
-        }, 900);
-
-    });
-
-
-    /* =========================================
-       STARS
-    ========================================= */
-
-    const stars = document.getElementById("stars");
-
-    for (let i = 0; i < 90; i++) {
-
-        const star = document.createElement("div");
-
-        star.className = "star";
-
-        star.style.left = Math.random() * 100 + "%";
-        star.style.top = Math.random() * 100 + "%";
-
-        star.style.animationDelay =
-            Math.random() * 3 + "s";
-
-        star.style.animationDuration =
-            1.5 + Math.random() * 3 + "s";
-
-        stars.appendChild(star);
-    }
-
-
-    /* =========================================
-       FLOATING PARTICLES
-    ========================================= */
-
-    function createParticle() {
-
-        const particle =
-            document.createElement("div");
-
-        particle.className = "particle";
-
-        const items = [
-            "💜",
-            "✨",
-            "⭐",
-            "💫",
-            "♡",
-            "✦"
-        ];
-
-        particle.innerText =
-            items[Math.floor(Math.random() * items.length)];
-
-        particle.style.left =
-            Math.random() * 100 + "%";
-
-        particle.style.animationDuration =
-            7 + Math.random() * 7 + "s";
-
-        particle.style.fontSize =
-            12 + Math.random() * 17 + "px";
-
-        document.getElementById("particles")
-            .appendChild(particle);
-
-        setTimeout(() => {
-            particle.remove();
-        }, 15000);
-    }
-
-    setInterval(createParticle, 600);
-
-
-    /* =========================================
-       MUSIC PLAYER
-    ========================================= */
-
-    const song =
-        document.getElementById("song");
-
-    const musicToggle =
-        document.getElementById("musicToggle");
-
-    const musicStatus =
-        document.getElementById("musicStatus");
-
-    const musicIcon =
-        document.getElementById("musicIcon");
-
-    const progress =
-        document.getElementById("progress");
-
-    const volume =
-        document.getElementById("volume");
-
-
-    song.volume = .65;
-
-
-    function playMusic() {
-
-        song.play()
-            .then(() => {
-
-                musicToggle.innerText = "❚❚";
-
-                musicStatus.innerText =
-                    "Now playing 💜";
-
-                musicIcon.style.animation =
-                    "heartbeat 1s infinite";
-
-            })
-            .catch(() => {
-
-                musicStatus.innerText =
-                    "Tap again to play 🎵";
-
-            });
-
-    }
-
-
-    function pauseMusic() {
-
-        song.pause();
-
-        musicToggle.innerText = "▶";
-
-        musicStatus.innerText =
-            "Music paused";
-
-        musicIcon.style.animation = "none";
-    }
-
-
-    musicToggle.addEventListener("click", () => {
-
-        if (song.paused) {
-            playMusic();
-        } else {
-            pauseMusic();
-        }
-
-    });
-
-
-    volume.addEventListener("input", () => {
-
-        song.volume = volume.value;
-
-    });
-
-
-    song.addEventListener("timeupdate", () => {
-
-        if (!song.duration) return;
-
-        progress.value =
-            (song.currentTime / song.duration) * 100;
-
-    });
-
-
-    progress.addEventListener("input", () => {
-
-        if (!song.duration) return;
-
-        song.currentTime =
-            (progress.value / 100) * song.duration;
-
-    });
-
-
-    /* =========================================
-       BUTTON HELPERS
-    ========================================= */
-
-    function show(id) {
-
-        const element =
-            document.getElementById(id);
-
-        element.style.display = "block";
-    }
-
-
-    function hide(id) {
-
-        const element =
-            document.getElementById(id);
-
-        element.style.display = "none";
-    }
-
-
-    /* =========================================
-       LIGHTS
-    ========================================= */
-
-    document
-        .getElementById("turn_on")
-        .addEventListener("click", function () {
-
-            document
-                .querySelectorAll(".bulb")
-                .forEach((bulb, index) => {
-
-                    setTimeout(() => {
-                        bulb.classList.add("active");
-                    }, index * 120);
-
-                });
-
-            document.body.style.background =
-                "radial-gradient(circle at 50% 10%, #7b2cbf, #240046 55%, #10002b)";
-
-            this.style.display = "none";
-
-            show("playBtn");
-
-        });
-
-
-    /* =========================================
-       MUSIC BUTTON
-    ========================================= */
-
-    document
-        .getElementById("playBtn")
-        .addEventListener("click", function () {
-
-            playMusic();
-
-            this.style.display = "none";
-
-            show("bannerBtn");
-
-        });
-
-
-    /* =========================================
-       BANNER
-    ========================================= */
-
-    document
-        .getElementById("bannerBtn")
-        .addEventListener("click", function () {
-
-            document
-                .getElementById("banner")
-                .classList.add("show");
-
-            this.style.display = "none";
-
-            show("balloonBtn");
-
-        });
-
-
-    /* =========================================
-       BALLOONS
-    ========================================= */
-
-    document
-        .getElementById("balloonBtn")
-        .addEventListener("click", function () {
-
-            const balloons =
-                document.querySelectorAll(".balloon");
-
-            balloons.forEach((balloon, index) => {
-
-                balloon.style.left =
-                    (10 + Math.random() * 80) + "%";
-
-                balloon.style.bottom =
-                    "-100px";
-
-                setTimeout(() => {
-
-                    balloon.style.transition =
-                        "bottom 7s cubic-bezier(.2,.8,.2,1)";
-
-                    balloon.style.bottom =
-                        (20 + Math.random() * 55) + "%";
-
-                }, index * 250);
-
-            });
-
-            this.style.display = "none";
-
-            setTimeout(() => {
-                show("cakeBtn");
-            }, 2500);
-
-        });
-
-
-    /* =========================================
-       CAKE
-    ========================================= */
-
-    document
-        .getElementById("cakeBtn")
-        .addEventListener("click", function () {
-
-            document
-                .getElementById("cake")
-                .style.display = "block";
-
-            this.style.display = "none";
-
-            show("candleBtn");
-
-        });
-
-
-    /* =========================================
-       CANDLES
-    ========================================= */
-
-    document
-        .getElementById("candleBtn")
-        .addEventListener("click", function () {
-
-            document
-                .querySelectorAll(".flame")
-                .forEach(flame => {
-
-                    flame.style.display = "block";
-
-                });
-
-            confettiBurst(50);
-
-            this.style.display = "none";
-
-            show("wishBtn");
-
-        });
-
-
-    /* =========================================
-       YASHVI BALLOONS CENTER
-    ========================================= */
-
-    document
-        .getElementById("wishBtn")
-        .addEventListener("click", function () {
-
-            const ids = [
-                "b1",
-                "b2",
-                "b3",
-                "b4",
-                "b5",
-                "b6"
-            ];
-
-            const spacing =
-                window.innerWidth < 500
-                ? 48
-                : 72;
-
-            const center =
-                window.innerWidth / 2;
-
-            ids.forEach((id, index) => {
-
-                const balloon =
-                    document.getElementById(id);
-
-                const offset =
-                    (index - 2.5) * spacing;
-
-                balloon.style.transition =
-                    "all 1.2s cubic-bezier(.2,.8,.2,1)";
-
-                balloon.style.left =
-                    (center + offset - 25) + "px";
-
-                balloon.style.top =
-                    "16%";
-
-                balloon.style.bottom =
-                    "auto";
-
-            });
-
-            confettiBurst(100);
-
-            this.style.display = "none";
-
-            setTimeout(() => {
-
-                show("storyBtn");
-
-            }, 1200);
-
-        });
-
-
-    /* =========================================
-       MESSAGE
-    ========================================= */
-
-    const paragraphs =
-        document.querySelectorAll(".message p");
-
-    function showMessage(index) {
-
-        if (index >= paragraphs.length) {
-
-            showBTSSection();
-
-            return;
-
-        }
-
-        paragraphs[index].style.display =
-            "block";
-
-        paragraphs[index].style.opacity = 0;
-
-        paragraphs[index]
-            .animate(
-                [
-                    {
-                        opacity: 0,
-                        transform: "translateY(15px)"
-                    },
-                    {
-                        opacity: 1,
-                        transform: "translateY(0)"
-                    }
-                ],
-                {
-                    duration: 900,
-                    fill: "forwards"
-                }
-            );
-
-        setTimeout(() => {
-
-            paragraphs[index].style.display =
-                "none";
-
-            showMessage(index + 1);
-
-        }, 2400);
-
-    }
-
-
-    document
-        .getElementById("storyBtn")
-        .addEventListener("click", function () {
-
-            this.style.display = "none";
-
-            document
-                .getElementById("message")
-                .style.display = "block";
-
-            showMessage(0);
-
-        });
-
-
-    /* =========================================
-       BTS SECTION
-    ========================================= */
-
-    function showBTSSection() {
-
-        const section =
-            document.getElementById("btsSection");
-
-        section.style.display = "block";
-
-        section.animate(
-            [
-                {
-                    opacity: 0,
-                    transform: "translateY(50px)"
-                },
-                {
-                    opacity: 1,
-                    transform: "translateY(0)"
-                }
-            ],
-            {
-                duration: 1200,
-                fill: "forwards"
-            }
-        );
-
-        confettiBurst(120);
-
-        setTimeout(() => {
-
-            section.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        }, 500);
-
-    }
-
-
-    /* =========================================
-       CONFETTI
-    ========================================= */
-
-    function confettiBurst(amount) {
-
-        const symbols = [
-            "💜",
-            "✨",
-            "💫",
-            "⭐",
-            "♡",
-            "✦"
-        ];
-
-        for (let i = 0; i < amount; i++) {
-
-            const confetti =
-                document.createElement("div");
-
-            confetti.className =
-                "confetti";
-
-            confetti.innerText =
-                symbols[
-                    Math.floor(
-                        Math.random() *
-                        symbols.length
-                    )
-                ];
-
-            confetti.style.left =
-                Math.random() * 100 + "vw";
-
-            confetti.style.fontSize =
-                10 + Math.random() * 16 + "px";
-
-            confetti.style.animationDuration =
-                2 + Math.random() * 4 + "s";
-
-            confetti.style.animationDelay =
-                Math.random() * .8 + "s";
-
-            document.body.appendChild(confetti);
-
-            setTimeout(() => {
-                confetti.remove();
-            }, 7000);
-
-        }
-
-    }
-
-
-    /* =========================================
-       FLOATING HEARTS
-    ========================================= */
-
-    function createHeart() {
-
-        const heart =
-            document.createElement("div");
-
-        heart.className = "heart";
-
-        heart.innerText =
-            Math.random() > .5
-            ? "💜"
-            : "♡";
-
-        heart.style.left =
-            Math.random() * 100 + "vw";
-
-        heart.style.fontSize =
-            15 + Math.random() * 20 + "px";
-
-        heart.style.setProperty(
-            "--drift",
-            (-80 + Math.random() * 160) + "px"
-        );
-
-        heart.style.animationDuration =
-            5 + Math.random() * 5 + "s";
-
-        document.body.appendChild(heart);
-
-        setTimeout(() => {
-            heart.remove();
-        }, 11000);
-
-    }
-
-    setInterval(createHeart, 1200);
-
-
-    window.addEventListener("resize", () => {
-
-        if (window.innerWidth < 500) {
-
-            document
-                .querySelectorAll(".balloon")
-                .forEach(balloon => {
-
-                    balloon.style.transform =
-                        "scale(.9)";
-
-                });
-
-        }
-
-    });
-
-</script>
-
-</body>
-</html>
-```
+        src="https://files.catbox.moe/44idzk.mp3" 
+        type="audio/mpeg"> 
+</audio> 
+ 
+ 
+<script> 
+ 
+    /* ========================================= 
+       LOADING 
+    ========================================= */ 
+ 
+    window.addEventListener("load", () => { 
+ 
+        setTimeout(() => { 
+            document.getElementById("loading") 
+                .classList.add("hide"); 
+        }, 900); 
+ 
+    }); 
+ 
+ 
+    /* ========================================= 
+       STARS 
+    ========================================= */ 
+ 
+    const stars = document.getElementById("stars"); 
+ 
+    for (let i = 0; i < 90; i++) { 
+ 
+        const star = document.createElement("div"); 
+ 
+        star.className = "star"; 
+ 
+        star.style.left = Math.random() * 100 + "%"; 
+        star.style.top = Math.random() * 100 + "%"; 
+ 
+        star.style.animationDelay = 
+            Math.random() * 3 + "s"; 
+ 
+        star.style.animationDuration = 
+            1.5 + Math.random() * 3 + "s"; 
+ 
+        stars.appendChild(star); 
+    } 
+ 
+ 
+    /* ========================================= 
+       FLOATING PARTICLES 
+    ========================================= */ 
+ 
+    function createParticle() { 
+ 
+        const particle = 
+            document.createElement("div"); 
+ 
+        particle.className = "particle"; 
+ 
+        const items = [ 
+            "💜", 
+            "✨", 
+            "⭐", 
+            "💫", 
+            "♡", 
+            "✦" 
+        ]; 
+ 
+        particle.innerText = 
+            items[Math.floor(Math.random() * items.length)]; 
+ 
+        particle.style.left = 
+            Math.random() * 100 + "%"; 
+ 
+        particle.style.animationDuration = 
+            7 + Math.random() * 7 + "s"; 
+ 
+        particle.style.fontSize = 
+            12 + Math.random() * 17 + "px"; 
+ 
+        document.getElementById("particles") 
+            .appendChild(particle); 
+ 
+        setTimeout(() => { 
+            particle.remove(); 
+        }, 15000); 
+    } 
+ 
+    setInterval(createParticle, 600); 
+ 
+ 
+    /* ========================================= 
+       MUSIC PLAYER 
+    ========================================= */ 
+ 
+    const song = 
+        document.getElementById("song"); 
+ 
+    const musicToggle = 
+        document.getElementById("musicToggle"); 
+ 
+    const musicStatus = 
+        document.getElementById("musicStatus"); 
+ 
+    const musicIcon = 
+        document.getElementById("musicIcon"); 
+ 
+    const progress = 
+        document.getElementById("progress"); 
+ 
+    const volume = 
+        document.getElementById("volume"); 
+ 
+ 
+    song.volume = .65; 
+ 
+ 
+    function playMusic() { 
+ 
+        song.play() 
+            .then(() => { 
+ 
+                musicToggle.innerText = "❚❚"; 
+ 
+                musicStatus.innerText = 
+                    "Now playing 💜"; 
+ 
+                musicIcon.style.animation = 
+                    "heartbeat 1s infinite"; 
+ 
+            }) 
+            .catch(() => { 
+ 
+                musicStatus.innerText = 
+                    "Tap again to play 🎵"; 
+ 
+            }); 
+ 
+    } 
+ 
+ 
+    function pauseMusic() { 
+ 
+        song.pause(); 
+ 
+        musicToggle.innerText = "▶"; 
+ 
+        musicStatus.innerText = 
+            "Music paused"; 
+ 
+        musicIcon.style.animation = "none"; 
+    } 
+ 
+ 
+    musicToggle.addEventListener("click", () => { 
+ 
+        if (song.paused) { 
+            playMusic(); 
+        } else { 
+            pauseMusic(); 
+        } 
+ 
+    }); 
+ 
+ 
+    volume.addEventListener("input", () => { 
+ 
+        song.volume = volume.value; 
+ 
+    }); 
+ 
+ 
+    song.addEventListener("timeupdate", () => { 
+ 
+        if (!song.duration) return; 
+ 
+        progress.value = 
+            (song.currentTime / song.duration) * 100; 
+ 
+    }); 
+ 
+ 
+    progress.addEventListener("input", () => { 
+ 
+        if (!song.duration) return; 
+ 
+        song.currentTime = 
+            (progress.value / 100) * song.duration; 
+ 
+    }); 
+ 
+ 
+    /* ========================================= 
+       BUTTON HELPERS 
+    ========================================= */ 
+ 
+    function show(id) { 
+ 
+        const element = 
+            document.getElementById(id); 
+ 
+        element.style.display = "block"; 
+    } 
+ 
+ 
+    function hide(id) { 
+ 
+        const element = 
+            document.getElementById(id); 
+ 
+        element.style.display = "none"; 
+    } 
+ 
+ 
+    /* ========================================= 
+       LIGHTS 
+    ========================================= */ 
+ 
+    document 
+        .getElementById("turn_on") 
+        .addEventListener("click", function () { 
+ 
+            document 
+                .querySelectorAll(".bulb") 
+                .forEach((bulb, index) => { 
+ 
+                    setTimeout(() => { 
+                        bulb.classList.add("active"); 
+                    }, index * 120); 
+ 
+                }); 
+ 
+            document.body.style.background = 
+                "radial-gradient(circle at 50% 10%, #7b2cbf, #240046 55%, #10002b)"; 
+ 
+            this.style.display = "none"; 
+ 
+            show("playBtn"); 
+ 
+        }); 
+ 
+ 
+    /* ========================================= 
+       MUSIC BUTTON 
+    ========================================= */ 
+ 
+    document 
+        .getElementById("playBtn") 
+        .addEventListener("click", function () { 
+ 
+            playMusic(); 
+ 
+            this.style.display = "none"; 
+ 
+            show("bannerBtn"); 
+ 
+        }); 
+ 
+ 
+    /* ========================================= 
+       BANNER 
+    ========================================= */ 
+ 
+    document 
+        .getElementById("bannerBtn") 
+        .addEventListener("click", function () { 
+ 
+            document 
+                .getElementById("banner") 
+                .classList.add("show"); 
+ 
+            this.style.display = "none"; 
+ 
+            show("balloonBtn"); 
+ 
+        }); 
+ 
+ 
+    /* ========================================= 
+       BALLOONS 
+    ========================================= */ 
+ 
+    document 
+        .getElementById("balloonBtn") 
+        .addEventListener("click", function () { 
+ 
+            const balloons = 
+                document.querySelectorAll(".balloon"); 
+ 
+            balloons.forEach((balloon, index) => { 
+ 
+                balloon.style.left = 
+                    (10 + Math.random() * 80) + "%"; 
+ 
+                balloon.style.bottom = 
+                    "-100px"; 
+ 
+                setTimeout(() => { 
+ 
+                    balloon.style.transition = 
+                        "bottom 7s cubic-bezier(.2,.8,.2,1)"; 
+ 
+                    balloon.style.bottom = 
+                        (20 + Math.random() * 55) + "%"; 
+ 
+                }, index * 250); 
+ 
+            }); 
+ 
+            this.style.display = "none"; 
+ 
+            setTimeout(() => { 
+                show("cakeBtn"); 
+            }, 2500); 
+ 
+        }); 
+ 
+ 
+    /* ========================================= 
+       CAKE 
+    ========================================= */ 
+ 
+    document 
+        .getElementById("cakeBtn") 
+        .addEventListener("click", function () { 
+ 
+            document 
+                .getElementById("cake") 
+                .style.display = "block"; 
+ 
+            this.style.display = "none"; 
+ 
+            show("candleBtn"); 
+ 
+        }); 
+ 
+ 
+    /* ========================================= 
+       CANDLES 
+    ========================================= */ 
+ 
+    document 
+        .getElementById("candleBtn") 
+        .addEventListener("click", function () { 
+ 
+            document 
+                .querySelectorAll(".flame") 
+                .forEach(flame => { 
+ 
+                    flame.style.display = "block"; 
+ 
+                }); 
+ 
+            confettiBurst(50); 
+ 
+            this.style.display = "none"; 
+ 
+            show("wishBtn"); 
+ 
+        }); 
+ 
+ 
+    /* ========================================= 
+       YASHVI BALLOONS CENTER 
+    ========================================= */ 
+ 
+    document 
+        .getElementById("wishBtn") 
+        .addEventListener("click", function () { 
+ 
+            const ids = [ 
+                "b1", 
+                "b2", 
+                "b3", 
+                "b4", 
+                "b5", 
+                "b6" 
+            ]; 
+ 
+            const spacing = 
+                window.innerWidth < 500 
+                ? 48 
+                : 72; 
+ 
+            const center = 
+                window.innerWidth / 2; 
+ 
+            ids.forEach((id, index) => { 
+ 
+                const balloon = 
+                    document.getElementById(id); 
+ 
+                const offset = 
+                    (index - 2.5) * spacing; 
+ 
+                balloon.style.transition = 
+                    "all 1.2s cubic-bezier(.2,.8,.2,1)"; 
+ 
+                balloon.style.left = 
+                    (center + offset - 25) + "px"; 
+ 
+                balloon.style.top = 
+                    "16%"; 
+ 
+                balloon.style.bottom = 
+                    "auto"; 
+ 
+            }); 
+ 
+            confettiBurst(100); 
+ 
+            this.style.display = "none"; 
+ 
+            setTimeout(() => { 
+ 
+                show("storyBtn"); 
+ 
+            }, 1200); 
+ 
+        }); 
+ 
+ 
+    /* ========================================= 
+       MESSAGE 
+    ========================================= */ 
+ 
+    const paragraphs = 
+        document.querySelectorAll(".message p"); 
+ 
+    function showMessage(index) { 
+ 
+        if (index >= paragraphs.length) { 
+ 
+            showBTSSection(); 
+ 
+            return; 
+ 
+        } 
+ 
+        paragraphs[index].style.display = 
+            "block"; 
+ 
+        paragraphs[index].style.opacity = 0; 
+ 
+        paragraphs[index] 
+            .animate( 
+                [ 
+                    { 
+                        opacity: 0, 
+                        transform: "translateY(15px)" 
+                    }, 
+                    { 
+                        opacity: 1, 
+                        transform: "translateY(0)" 
+                    } 
+                ], 
+                { 
+                    duration: 900, 
+                    fill: "forwards" 
+                } 
+            ); 
+ 
+        setTimeout(() => { 
+ 
+            paragraphs[index].style.display = 
+                "none"; 
+ 
+            showMessage(index + 1); 
+ 
+        }, 2400); 
+ 
+    } 
+ 
+ 
+    document 
+        .getElementById("storyBtn") 
+        .addEventListener("click", function () { 
+ 
+            this.style.display = "none"; 
+ 
+            document 
+                .getElementById("message") 
+                .style.display = "block"; 
+ 
+            showMessage(0); 
+ 
+        }); 
+ 
+ 
+    /* ========================================= 
+       BTS SECTION 
+    ========================================= */ 
+ 
+    function showBTSSection() { 
+ 
+        const section = 
+            document.getElementById("btsSection"); 
+ 
+        section.style.display = "block"; 
+ 
+        section.animate( 
+            [ 
+                { 
+                    opacity: 0, 
+                    transform: "translateY(50px)" 
+                }, 
+                { 
+                    opacity: 1, 
+                    transform: "translateY(0)" 
+                } 
+            ], 
+            { 
+                duration: 1200, 
+                fill: "forwards" 
+            } 
+        ); 
+ 
+        confettiBurst(120); 
+ 
+        setTimeout(() => { 
+ 
+            section.scrollIntoView({ 
+                behavior: "smooth", 
+                block: "start" 
+            }); 
+ 
+        }, 500); 
+ 
+    } 
+ 
+ 
+    /* ========================================= 
+       CONFETTI 
+    ========================================= */ 
+ 
+    function confettiBurst(amount) { 
+ 
+        const symbols = [ 
+            "💜", 
+            "✨", 
+            "💫", 
+            "⭐", 
+            "♡", 
+            "✦" 
+        ]; 
+ 
+        for (let i = 0; i < amount; i++) { 
+ 
+            const confetti = 
+                document.createElement("div"); 
+ 
+            confetti.className = 
+                "confetti"; 
+ 
+            confetti.innerText = 
+                symbols[ 
+                    Math.floor( 
+                        Math.random() * 
+                        symbols.length 
+                    ) 
+                ]; 
+ 
+            confetti.style.left = 
+                Math.random() * 100 + "vw"; 
+ 
+            confetti.style.fontSize = 
+                10 + Math.random() * 16 + "px"; 
+ 
+            confetti.style.animationDuration = 
+                2 + Math.random() * 4 + "s"; 
+ 
+            confetti.style.animationDelay = 
+                Math.random() * .8 + "s"; 
+ 
+            document.body.appendChild(confetti); 
+ 
+            setTimeout(() => { 
+                confetti.remove(); 
+            }, 7000); 
+ 
+        } 
+ 
+    } 
+ 
+ 
+    /* ========================================= 
+       FLOATING HEARTS 
+    ========================================= */ 
+ 
+    function createHeart() { 
+ 
+        const heart = 
+            document.createElement("div"); 
+ 
+        heart.className = "heart"; 
+ 
+        heart.innerText = 
+            Math.random() > .5 
+            ? "💜" 
+            : "♡"; 
+ 
+        heart.style.left = 
+            Math.random() * 100 + "vw"; 
+ 
+        heart.style.fontSize = 
+            15 + Math.random() * 20 + "px"; 
+ 
+        heart.style.setProperty( 
+            "--drift", 
+            (-80 + Math.random() * 160) + "px" 
+        ); 
+ 
+        heart.style.animationDuration = 
+            5 + Math.random() * 5 + "s"; 
+ 
+        document.body.appendChild(heart); 
+ 
+        setTimeout(() => { 
+            heart.remove(); 
+        }, 11000); 
+ 
+    } 
+ 
+    setInterval(createHeart, 1200); 
+ 
+ 
+    window.addEventListener("resize", () => { 
+ 
+        if (window.innerWidth < 500) { 
+ 
+            document 
+                .querySelectorAll(".balloon") 
+                .forEach(balloon => { 
+ 
+                    balloon.style.transform = 
+                        "scale(.9)"; 
+ 
+                }); 
+ 
+        } 
+ 
+    }); 
+ 
+</script> 
+ 
+</body> 
+</html> 
+``` 
