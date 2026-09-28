@@ -1,0 +1,1895 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>💜 Happy Borahae Birthday Yashvi 💜</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Signika:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+    <style>
+        :root {
+            --purple: #7b2cbf;
+            --deep-purple: #240046;
+            --light-purple: #c77dff;
+            --pink: #e0aaff;
+            --white: #ffffff;
+            --glass: rgba(255,255,255,.12);
+            --border: rgba(255,255,255,.25);
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+            font-family: 'Signika', sans-serif;
+            color: white;
+            background:
+                radial-gradient(circle at 20% 20%, #7b2cbf 0%, transparent 30%),
+                radial-gradient(circle at 80% 80%, #5a189a 0%, transparent 30%),
+                linear-gradient(135deg, #10002b, #240046, #3c096c);
+            transition: background 1.5s ease;
+        }
+
+        /* =========================================
+           LOADING
+        ========================================= */
+
+        .loading {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #10002b;
+            transition: opacity .8s ease, visibility .8s ease;
+        }
+
+        .loading.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loading-content {
+            text-align: center;
+        }
+
+        .loading-heart {
+            font-size: 70px;
+            animation: heartbeat 1s infinite;
+        }
+
+        .loading-text {
+            margin-top: 15px;
+            font-family: 'Montserrat';
+            letter-spacing: 3px;
+            font-size: 13px;
+        }
+
+        @keyframes heartbeat {
+            0%,100% { transform: scale(1); }
+            50% { transform: scale(1.25); }
+        }
+
+        /* =========================================
+           STAR BACKGROUND
+        ========================================= */
+
+        #stars,
+        #particles {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px white;
+            animation: twinkle 2s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%,100% {
+                opacity: .2;
+                transform: scale(.7);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+        .particle {
+            position: absolute;
+            font-size: 20px;
+            animation: particleFloat linear forwards;
+        }
+
+        @keyframes particleFloat {
+            from {
+                transform: translateY(100vh) rotate(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(-120vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* =========================================
+           MAIN
+        ========================================= */
+
+        .main {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px 15px 180px;
+        }
+
+        /* =========================================
+           LIGHTS
+        ========================================= */
+
+        .lights {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 5px auto 15px;
+        }
+
+        .bulb {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #555;
+            transition: .5s;
+        }
+
+        .bulb.active {
+            background: #e0aaff;
+            box-shadow:
+                0 0 10px #e0aaff,
+                0 0 25px #c77dff,
+                0 0 45px #7b2cbf;
+        }
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .hero-title {
+            font-family: 'Montserrat';
+            font-weight: 800;
+            font-size: clamp(30px, 7vw, 68px);
+            margin: 20px 0 8px;
+            background: linear-gradient(
+                90deg,
+                #fff,
+                #e0aaff,
+                #fff,
+                #c77dff
+            );
+            background-size: 300%;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: gradientText 5s linear infinite;
+        }
+
+        @keyframes gradientText {
+            to {
+                background-position: 300%;
+            }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(17px, 4vw, 24px);
+            opacity: .9;
+        }
+
+        .bannar {
+            width: min(90%, 550px);
+            margin: 20px auto;
+            display: block;
+            border-radius: 25px;
+            box-shadow:
+                0 0 25px rgba(199,125,255,.45),
+                0 20px 60px rgba(0,0,0,.35);
+            transform: translateY(40px);
+            opacity: 0;
+            transition: 1.5s ease;
+        }
+
+        .bannar.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* =========================================
+           MUSIC PLAYER
+        ========================================= */
+
+        .music-player {
+            position: fixed;
+            left: 50%;
+            bottom: 18px;
+            transform: translateX(-50%);
+            z-index: 9990;
+
+            width: min(92%, 470px);
+            padding: 13px 15px;
+
+            background: rgba(20, 5, 40, .78);
+            backdrop-filter: blur(18px);
+            border: 1px solid var(--border);
+            border-radius: 25px;
+
+            box-shadow:
+                0 15px 40px rgba(0,0,0,.4),
+                0 0 25px rgba(123,44,191,.25);
+        }
+
+        .music-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .music-icon {
+            width: 43px;
+            height: 43px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg,#7b2cbf,#c77dff);
+            font-size: 21px;
+            flex-shrink: 0;
+        }
+
+        .music-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .music-title {
+            font-family: 'Montserrat';
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .music-status {
+            font-size: 11px;
+            opacity: .65;
+        }
+
+        .music-controls button {
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .progress {
+            width: 100%;
+            margin-top: 9px;
+            accent-color: #c77dff;
+        }
+
+        .volume {
+            width: 75px;
+            accent-color: #c77dff;
+        }
+
+        /* =========================================
+           BUTTONS
+        ========================================= */
+
+        .controls {
+            width: min(100%, 400px);
+            margin: 30px auto;
+        }
+
+        .btn-bts {
+            width: 100%;
+            padding: 14px 20px;
+            margin: 7px 0;
+
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: 50px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(123,44,191,.9),
+                    rgba(90,24,154,.9)
+                );
+
+            color: white;
+            font-family: 'Montserrat';
+            font-size: 12px;
+            letter-spacing: 1.2px;
+
+            cursor: pointer;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,.25);
+            transition: .3s;
+        }
+
+        .btn-bts:hover,
+        .btn-bts:active {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow:
+                0 10px 30px rgba(199,125,255,.35);
+        }
+
+        /* =========================================
+           BALLOONS
+        ========================================= */
+
+        .balloon-layer {
+            position: fixed;
+            inset: 0;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+
+            width: 65px;
+            height: 80px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50% 50% 45% 45%;
+
+            background:
+                radial-gradient(
+                    circle at 30% 25%,
+                    #fff,
+                    #c77dff 10%,
+                    #7b2cbf 55%,
+                    #3c096c
+                );
+
+            box-shadow:
+                inset -10px -12px 20px rgba(0,0,0,.25),
+                0 0 20px rgba(199,125,255,.4);
+
+            transition: left 1s ease, top 1s ease;
+        }
+
+        .balloon::after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 100px;
+            background: rgba(255,255,255,.5);
+            top: 78px;
+        }
+
+        .balloon span {
+            font-family: 'Montserrat';
+            font-weight: 800;
+            font-size: 30px;
+        }
+
+        /* =========================================
+           CAKE
+        ========================================= */
+
+        .cake-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 270px;
+            margin: 20px auto;
+        }
+
+        .cake {
+            position: relative;
+            width: 210px;
+            height: 180px;
+            animation: cakeAppear 1s ease forwards;
+        }
+
+        @keyframes cakeAppear {
+            from {
+                transform: translateY(80px) scale(.5);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .cake-bottom {
+            position: absolute;
+            bottom: 10px;
+            left: 15px;
+
+            width: 180px;
+            height: 70px;
+
+            border-radius: 12px 12px 25px 25px;
+
+            background:
+                linear-gradient(
+                    #9d4edd,
+                    #5a189a
+                );
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,.35),
+                inset 0 -12px 20px rgba(0,0,0,.2);
+        }
+
+        .cake-middle {
+            position: absolute;
+            bottom: 62px;
+            left: 25px;
+
+            width: 160px;
+            height: 48px;
+
+            border-radius: 12px;
+
+            background:
+                linear-gradient(
+                    #e0aaff,
+                    #9d4edd
+                );
+
+            box-shadow: inset 0 -8px 10px rgba(0,0,0,.15);
+        }
+
+        .cream {
+            position: absolute;
+            bottom: 102px;
+            left: 32px;
+
+            width: 146px;
+            height: 25px;
+
+            background: #fff;
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 15px rgba(255,255,255,.6);
+        }
+
+        .cream::before,
+        .cream::after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: #fff;
+            border-radius: 50%;
+            bottom: -10px;
+        }
+
+        .cream::before {
+            left: 25px;
+        }
+
+        .cream::after {
+            right: 25px;
+        }
+
+        .candle {
+            position: absolute;
+            bottom: 118px;
+            width: 13px;
+            height: 50px;
+
+            background:
+                repeating-linear-gradient(
+                    45deg,
+                    #fff 0 6px,
+                    #c77dff 6px 12px
+                );
+
+            border-radius: 5px;
+        }
+
+        .candle:nth-child(1) { left: 65px; }
+        .candle:nth-child(2) { left: 98px; }
+        .candle:nth-child(3) { left: 131px; }
+
+        .flame {
+            position: absolute;
+            width: 17px;
+            height: 25px;
+            top: -23px;
+            left: -2px;
+
+            background:
+                radial-gradient(
+                    circle at 50% 80%,
+                    #fff 0 15%,
+                    #ffd166 30%,
+                    #ff7b00 65%,
+                    transparent 70%
+                );
+
+            border-radius: 50% 50% 50% 10%;
+            transform: rotate(-45deg);
+
+            filter: drop-shadow(0 0 10px #ffd166);
+
+            animation: flame 0.7s infinite alternate;
+        }
+
+        @keyframes flame {
+            from {
+                transform: rotate(-45deg) scale(.9);
+            }
+
+            to {
+                transform: rotate(-40deg) scale(1.15);
+            }
+        }
+
+        .cake-text {
+            position: absolute;
+            bottom: 32px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+
+            font-family: 'Montserrat';
+            font-weight: 800;
+            font-size: 15px;
+        }
+
+        /* =========================================
+           MESSAGE
+        ========================================= */
+
+        .message {
+            width: min(95%, 650px);
+            margin: 30px auto;
+            padding: 28px 22px;
+
+            background: rgba(255,255,255,.10);
+            backdrop-filter: blur(18px);
+
+            border: 1px solid var(--border);
+            border-radius: 25px;
+
+            text-align: center;
+
+            box-shadow: 0 20px 60px rgba(0,0,0,.25);
+        }
+
+        .message p {
+            display: none;
+            font-size: clamp(17px, 4vw, 21px);
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .message .final {
+            color: #e0aaff;
+            font-family: 'Montserrat';
+            font-weight: 800;
+        }
+
+        /* =========================================
+           BTS MEMBERS
+        ========================================= */
+
+        .bts-section {
+            display: none;
+            margin-top: 70px;
+            padding: 20px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Montserrat';
+            font-size: clamp(24px, 6vw, 42px);
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            opacity: .75;
+            margin-bottom: 30px;
+        }
+
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .member-card {
+            position: relative;
+            overflow: hidden;
+
+            background: rgba(255,255,255,.09);
+            backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: 20px;
+
+            padding: 10px;
+
+            transition: .4s;
+        }
+
+        .member-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(199,125,255,.3);
+        }
+
+        .member-card img {
+            width: 100%;
+            aspect-ratio: 1 / 1.15;
+            object-fit: cover;
+            border-radius: 15px;
+            display: block;
+        }
+
+        .member-name {
+            text-align: center;
+            font-family: 'Montserrat';
+            font-weight: 700;
+            padding: 12px 3px 5px;
+        }
+
+        .member-heart {
+            text-align: center;
+            color: #e0aaff;
+            font-size: 13px;
+        }
+
+        /* =========================================
+           CONFETTI
+        ========================================= */
+
+        .confetti {
+            position: fixed;
+            width: 9px;
+            height: 14px;
+            top: -30px;
+            z-index: 9998;
+            pointer-events: none;
+            animation: confettiFall linear forwards;
+        }
+
+        @keyframes confettiFall {
+            to {
+                transform:
+                    translateY(110vh)
+                    rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* =========================================
+           HEARTS
+        ========================================= */
+
+        .heart {
+            position: fixed;
+            bottom: -30px;
+            z-index: 1;
+            pointer-events: none;
+            animation: heartFloat linear forwards;
+        }
+
+        @keyframes heartFloat {
+            to {
+                transform:
+                    translateY(-110vh)
+                    translateX(var(--drift))
+                    rotate(30deg);
+                opacity: 0;
+            }
+        }
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media(max-width: 800px) {
+            .members-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 12px;
+            }
+
+            .balloon {
+                width: 54px;
+                height: 68px;
+            }
+
+            .balloon span {
+                font-size: 25px;
+            }
+        }
+
+        @media(max-width: 520px) {
+
+            .main {
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-bottom: 170px;
+            }
+
+            .lights {
+                gap: 8px;
+            }
+
+            .bulb {
+                width: 11px;
+                height: 11px;
+            }
+
+            .hero {
+                padding-top: 10px;
+            }
+
+            .members-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .member-card {
+                padding: 7px;
+                border-radius: 15px;
+            }
+
+            .member-card img {
+                border-radius: 11px;
+            }
+
+            .member-name {
+                font-size: 12px;
+                padding-top: 9px;
+            }
+
+            .music-player {
+                bottom: 10px;
+                padding: 11px;
+            }
+
+            .volume {
+                display: none;
+            }
+
+            .music-title {
+                font-size: 11px;
+            }
+
+            .music-status {
+                font-size: 10px;
+            }
+
+            .cake {
+                transform: scale(.85);
+            }
+
+            .message {
+                padding: 25px 17px;
+            }
+
+            .balloon {
+                width: 48px;
+                height: 62px;
+            }
+
+            .balloon span {
+                font-size: 22px;
+            }
+        }
+
+        @media(max-width: 360px) {
+            .members-grid {
+                gap: 7px;
+            }
+
+            .member-card {
+                padding: 5px;
+            }
+
+            .hero-title {
+                font-size: 29px;
+            }
+        }
+
+        /* Prevent animations for users who request reduced motion */
+        @media(prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================================
+     LOADING SCREEN
+========================================= -->
+
+<div class="loading" id="loading">
+    <div class="loading-content">
+        <div class="loading-heart">💜</div>
+        <div class="loading-text">BORahae...</div>
+    </div>
+</div>
+
+<!-- =========================================
+     BACKGROUND EFFECTS
+========================================= -->
+
+<div id="stars"></div>
+<div id="particles"></div>
+
+<!-- =========================================
+     BALLOONS
+========================================= -->
+
+<div class="balloon-layer">
+
+    <div class="balloon" id="b1">
+        <span>Y</span>
+    </div>
+
+    <div class="balloon" id="b2">
+        <span>A</span>
+    </div>
+
+    <div class="balloon" id="b3">
+        <span>S</span>
+    </div>
+
+    <div class="balloon" id="b4">
+        <span>H</span>
+    </div>
+
+    <div class="balloon" id="b5">
+        <span>V</span>
+    </div>
+
+    <div class="balloon" id="b6">
+        <span>I</span>
+    </div>
+
+</div>
+
+<!-- =========================================
+     MAIN
+========================================= -->
+
+<main class="main">
+
+    <!-- LIGHTS -->
+
+    <div class="lights">
+
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+        <div class="bulb"></div>
+
+    </div>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1 class="hero-title">
+            Happy Borahae Birthday 💜
+        </h1>
+
+        <div class="hero-subtitle">
+            Yashvi ✨
+        </div>
+
+        <img
+            class="bannar"
+            id="banner"
+            src="https://i.ibb.co/DPZ7MDRT/her.jpg"
+            alt="Happy Birthday Yashvi">
+
+    </section>
+
+    <!-- =========================================
+         CAKE
+    ========================================= -->
+
+    <section class="cake-area">
+
+        <div class="cake" id="cake" style="display:none;">
+
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+
+            <div class="cream"></div>
+
+            <div class="cake-middle"></div>
+
+            <div class="cake-bottom"></div>
+
+            <div class="cake-text">
+                HAPPY BIRTHDAY YASHVI 💜
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================================
+         CONTROLS
+    ========================================= -->
+
+    <div class="controls">
+
+        <button class="btn-bts" id="turn_on">
+            💡 Light the Purple Stage
+        </button>
+
+        <button class="btn-bts" id="playBtn" style="display:none;">
+            🎵 Play BTS Vibes
+        </button>
+
+        <button class="btn-bts" id="bannerBtn" style="display:none;">
+            ✨ Reveal the Birthday
+        </button>
+
+        <button class="btn-bts" id="balloonBtn" style="display:none;">
+            🎈 Release YASHVI
+        </button>
+
+        <button class="btn-bts" id="cakeBtn" style="display:none;">
+            🎂 Bring the Birthday Cake
+        </button>
+
+        <button class="btn-bts" id="candleBtn" style="display:none;">
+            🕯️ Light the Birthday Candles
+        </button>
+
+        <button class="btn-bts" id="wishBtn" style="display:none;">
+            💜 Make a Birthday Wish
+        </button>
+
+        <button class="btn-bts" id="storyBtn" style="display:none;">
+            💌 Read Your Purple Message
+        </button>
+
+    </div>
+
+    <!-- =========================================
+         MESSAGE
+    ========================================= -->
+
+    <section class="message" id="message">
+
+        <p>Hi Yashvi... ✨</p>
+
+        <p>It's finally April 28th.</p>
+
+        <p>A quiet, beautiful day for a beautiful soul.</p>
+
+        <p>I know you don't need fancy things,</p>
+
+        <p>Just a little bit of love and a purple heart.</p>
+
+        <p>Another year has gone by...</p>
+
+        <p>Like a soft breeze in the <strong>Spring Day</strong>.</p>
+
+        <p>You make the world better just by being you,</p>
+
+        <p>Simple, kind, and genuine.</p>
+
+        <p>Like a BTS song that stays in the heart,</p>
+
+        <p>You have a magic that's all your own.</p>
+
+        <p>I made this small space for you</p>
+
+        <p>To celebrate the person you are.</p>
+
+        <p>No loud lights, just a little warmth</p>
+
+        <p>To wish you the happiest of birthdays.</p>
+
+        <p>I hope your day is filled with peace</p>
+
+        <p>And the kind of joy that makes you smile softly.</p>
+
+        <p>May your path always be <strong>smooth like butter</strong>,</p>
+
+        <p>And your heart always stay at ease.</p>
+
+        <p>Thank you for being part of my universe,</p>
+
+        <p>And for the simple friendship we share.</p>
+
+        <p>Don't ever change for the world,</p>
+
+        <p>Because you are perfect exactly as you are.</p>
+
+        <p>Indeed...</p>
+
+        <p>Just remember,</p>
+
+        <p>Whenever you feel like a 'lonely whale',</p>
+
+        <p>I'll be right here in your corner.</p>
+
+        <p>I hope this year brings you quiet happiness</p>
+
+        <p>And memories that stay beautiful forever.</p>
+
+        <p>Lastly...</p>
+
+        <p>Happy Birthday, Yashvi.</p>
+
+        <p class="final">
+            I Purple You. 💜
+        </p>
+
+    </section>
+
+
+    <!-- =========================================
+         BTS MEMBERS
+    ========================================= -->
+
+    <section class="bts-section" id="btsSection">
+
+        <h2 class="section-title">
+            💜 A Little BTS Magic 💜
+        </h2>
+
+        <p class="section-subtitle">
+            Seven stars for a special birthday ✨
+        </p>
+
+        <div class="members-grid">
+
+            <!-- Replace these image URLs with your preferred
+                 BTS photos if desired -->
+
+            <article class="member-card">
+                <img
+                    src="https://iili.io/BTS-RM.jpg"
+                    alt="RM"
+                    loading="lazy"
+                    onerror="this.src='https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=500&q=80'">
+                <div class="member-name">RM</div>
+                <div class="member-heart">💜</div>
+            </article>
+
+            <article class="member-card">
+                <img
+                    src="https://iili.io/BTS-JIN.jpg"
+                    alt="Jin"
+                    loading="lazy"
+                    onerror="this.src='https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=500&q=80'">
+                <div class="member-name">JIN</div>
+                <div class="member-heart">💜</div>
+            </article>
+
+            <article class="member-card">
+                <img
+                    src="https://iili.io/BTS-SUGA.jpg"
+                    alt="SUGA"
+                    loading="lazy"
+                    onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80'">
+                <div class="member-name">SUGA</div>
+                <div class="member-heart">💜</div>
+            </article>
+
+            <article class="member-card">
+                <img
+                    src="https://iili.io/BTS-JHOPE.jpg"
+                    alt="j-hope"
+                    loading="lazy"
+                    onerror="this.src='https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=500&q=80'">
+                <div class="member-name">j-hope</div>
+                <div class="member-heart">💜</div>
+            </article>
+
+            <article class="member-card">
+                <img
+                    src="https://iili.io/BTS-JIMIN.jpg"
+                    alt="Jimin"
+                    loading="lazy"
+                    onerror="this.src='https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=500&q=80'">
+                <div class="member-name">JIMIN</div>
+                <div class="member-heart">💜</div>
+            </article>
+
+            <article class="member-card">
+                <img
+                    src="https://iili.io/BTS-V.jpg"
+                    alt="V"
+                    loading="lazy"
+                    onerror="this.src='https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=500&q=80'">
+                <div class="member-name">V</div>
+                <div class="member-heart">💜</div>
+            </article>
+
+            <article class="member-card">
+                <img
+                    src="https://iili.io/BTS-JK.jpg"
+                    alt="Jung Kook"
+                    loading="lazy"
+                    onerror="this.src='https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80'">
+                <div class="member-name">JUNG KOOK</div>
+                <div class="member-heart">💜</div>
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================
+     MUSIC PLAYER
+========================================= -->
+
+<div class="music-player">
+
+    <div class="music-row">
+
+        <div class="music-icon" id="musicIcon">
+            🎵
+        </div>
+
+        <div class="music-info">
+
+            <div class="music-title">
+                Borahae Birthday Vibes
+            </div>
+
+            <div class="music-status" id="musicStatus">
+                Tap play to start 💜
+            </div>
+
+        </div>
+
+        <div class="music-controls">
+
+            <button id="musicToggle">
+                ▶
+            </button>
+
+        </div>
+
+        <input
+            class="volume"
+            id="volume"
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value=".65">
+
+    </div>
+
+    <input
+        class="progress"
+        id="progress"
+        type="range"
+        min="0"
+        max="100"
+        value="0">
+
+</div>
+
+
+<!-- AUDIO -->
+
+<audio id="song" loop preload="auto">
+    <source
+        src="https://files.catbox.moe/44idzk.mp3"
+        type="audio/mpeg">
+</audio>
+
+
+<script>
+
+    /* =========================================
+       LOADING
+    ========================================= */
+
+    window.addEventListener("load", () => {
+
+        setTimeout(() => {
+            document.getElementById("loading")
+                .classList.add("hide");
+        }, 900);
+
+    });
+
+
+    /* =========================================
+       STARS
+    ========================================= */
+
+    const stars = document.getElementById("stars");
+
+    for (let i = 0; i < 90; i++) {
+
+        const star = document.createElement("div");
+
+        star.className = "star";
+
+        star.style.left = Math.random() * 100 + "%";
+        star.style.top = Math.random() * 100 + "%";
+
+        star.style.animationDelay =
+            Math.random() * 3 + "s";
+
+        star.style.animationDuration =
+            1.5 + Math.random() * 3 + "s";
+
+        stars.appendChild(star);
+    }
+
+
+    /* =========================================
+       FLOATING PARTICLES
+    ========================================= */
+
+    function createParticle() {
+
+        const particle =
+            document.createElement("div");
+
+        particle.className = "particle";
+
+        const items = [
+            "💜",
+            "✨",
+            "⭐",
+            "💫",
+            "♡",
+            "✦"
+        ];
+
+        particle.innerText =
+            items[Math.floor(Math.random() * items.length)];
+
+        particle.style.left =
+            Math.random() * 100 + "%";
+
+        particle.style.animationDuration =
+            7 + Math.random() * 7 + "s";
+
+        particle.style.fontSize =
+            12 + Math.random() * 17 + "px";
+
+        document.getElementById("particles")
+            .appendChild(particle);
+
+        setTimeout(() => {
+            particle.remove();
+        }, 15000);
+    }
+
+    setInterval(createParticle, 600);
+
+
+    /* =========================================
+       MUSIC PLAYER
+    ========================================= */
+
+    const song =
+        document.getElementById("song");
+
+    const musicToggle =
+        document.getElementById("musicToggle");
+
+    const musicStatus =
+        document.getElementById("musicStatus");
+
+    const musicIcon =
+        document.getElementById("musicIcon");
+
+    const progress =
+        document.getElementById("progress");
+
+    const volume =
+        document.getElementById("volume");
+
+
+    song.volume = .65;
+
+
+    function playMusic() {
+
+        song.play()
+            .then(() => {
+
+                musicToggle.innerText = "❚❚";
+
+                musicStatus.innerText =
+                    "Now playing 💜";
+
+                musicIcon.style.animation =
+                    "heartbeat 1s infinite";
+
+            })
+            .catch(() => {
+
+                musicStatus.innerText =
+                    "Tap again to play 🎵";
+
+            });
+
+    }
+
+
+    function pauseMusic() {
+
+        song.pause();
+
+        musicToggle.innerText = "▶";
+
+        musicStatus.innerText =
+            "Music paused";
+
+        musicIcon.style.animation = "none";
+    }
+
+
+    musicToggle.addEventListener("click", () => {
+
+        if (song.paused) {
+            playMusic();
+        } else {
+            pauseMusic();
+        }
+
+    });
+
+
+    volume.addEventListener("input", () => {
+
+        song.volume = volume.value;
+
+    });
+
+
+    song.addEventListener("timeupdate", () => {
+
+        if (!song.duration) return;
+
+        progress.value =
+            (song.currentTime / song.duration) * 100;
+
+    });
+
+
+    progress.addEventListener("input", () => {
+
+        if (!song.duration) return;
+
+        song.currentTime =
+            (progress.value / 100) * song.duration;
+
+    });
+
+
+    /* =========================================
+       BUTTON HELPERS
+    ========================================= */
+
+    function show(id) {
+
+        const element =
+            document.getElementById(id);
+
+        element.style.display = "block";
+    }
+
+
+    function hide(id) {
+
+        const element =
+            document.getElementById(id);
+
+        element.style.display = "none";
+    }
+
+
+    /* =========================================
+       LIGHTS
+    ========================================= */
+
+    document
+        .getElementById("turn_on")
+        .addEventListener("click", function () {
+
+            document
+                .querySelectorAll(".bulb")
+                .forEach((bulb, index) => {
+
+                    setTimeout(() => {
+                        bulb.classList.add("active");
+                    }, index * 120);
+
+                });
+
+            document.body.style.background =
+                "radial-gradient(circle at 50% 10%, #7b2cbf, #240046 55%, #10002b)";
+
+            this.style.display = "none";
+
+            show("playBtn");
+
+        });
+
+
+    /* =========================================
+       MUSIC BUTTON
+    ========================================= */
+
+    document
+        .getElementById("playBtn")
+        .addEventListener("click", function () {
+
+            playMusic();
+
+            this.style.display = "none";
+
+            show("bannerBtn");
+
+        });
+
+
+    /* =========================================
+       BANNER
+    ========================================= */
+
+    document
+        .getElementById("bannerBtn")
+        .addEventListener("click", function () {
+
+            document
+                .getElementById("banner")
+                .classList.add("show");
+
+            this.style.display = "none";
+
+            show("balloonBtn");
+
+        });
+
+
+    /* =========================================
+       BALLOONS
+    ========================================= */
+
+    document
+        .getElementById("balloonBtn")
+        .addEventListener("click", function () {
+
+            const balloons =
+                document.querySelectorAll(".balloon");
+
+            balloons.forEach((balloon, index) => {
+
+                balloon.style.left =
+                    (10 + Math.random() * 80) + "%";
+
+                balloon.style.bottom =
+                    "-100px";
+
+                setTimeout(() => {
+
+                    balloon.style.transition =
+                        "bottom 7s cubic-bezier(.2,.8,.2,1)";
+
+                    balloon.style.bottom =
+                        (20 + Math.random() * 55) + "%";
+
+                }, index * 250);
+
+            });
+
+            this.style.display = "none";
+
+            setTimeout(() => {
+                show("cakeBtn");
+            }, 2500);
+
+        });
+
+
+    /* =========================================
+       CAKE
+    ========================================= */
+
+    document
+        .getElementById("cakeBtn")
+        .addEventListener("click", function () {
+
+            document
+                .getElementById("cake")
+                .style.display = "block";
+
+            this.style.display = "none";
+
+            show("candleBtn");
+
+        });
+
+
+    /* =========================================
+       CANDLES
+    ========================================= */
+
+    document
+        .getElementById("candleBtn")
+        .addEventListener("click", function () {
+
+            document
+                .querySelectorAll(".flame")
+                .forEach(flame => {
+
+                    flame.style.display = "block";
+
+                });
+
+            confettiBurst(50);
+
+            this.style.display = "none";
+
+            show("wishBtn");
+
+        });
+
+
+    /* =========================================
+       YASHVI BALLOONS CENTER
+    ========================================= */
+
+    document
+        .getElementById("wishBtn")
+        .addEventListener("click", function () {
+
+            const ids = [
+                "b1",
+                "b2",
+                "b3",
+                "b4",
+                "b5",
+                "b6"
+            ];
+
+            const spacing =
+                window.innerWidth < 500
+                ? 48
+                : 72;
+
+            const center =
+                window.innerWidth / 2;
+
+            ids.forEach((id, index) => {
+
+                const balloon =
+                    document.getElementById(id);
+
+                const offset =
+                    (index - 2.5) * spacing;
+
+                balloon.style.transition =
+                    "all 1.2s cubic-bezier(.2,.8,.2,1)";
+
+                balloon.style.left =
+                    (center + offset - 25) + "px";
+
+                balloon.style.top =
+                    "16%";
+
+                balloon.style.bottom =
+                    "auto";
+
+            });
+
+            confettiBurst(100);
+
+            this.style.display = "none";
+
+            setTimeout(() => {
+
+                show("storyBtn");
+
+            }, 1200);
+
+        });
+
+
+    /* =========================================
+       MESSAGE
+    ========================================= */
+
+    const paragraphs =
+        document.querySelectorAll(".message p");
+
+    function showMessage(index) {
+
+        if (index >= paragraphs.length) {
+
+            showBTSSection();
+
+            return;
+
+        }
+
+        paragraphs[index].style.display =
+            "block";
+
+        paragraphs[index].style.opacity = 0;
+
+        paragraphs[index]
+            .animate(
+                [
+                    {
+                        opacity: 0,
+                        transform: "translateY(15px)"
+                    },
+                    {
+                        opacity: 1,
+                        transform: "translateY(0)"
+                    }
+                ],
+                {
+                    duration: 900,
+                    fill: "forwards"
+                }
+            );
+
+        setTimeout(() => {
+
+            paragraphs[index].style.display =
+                "none";
+
+            showMessage(index + 1);
+
+        }, 2400);
+
+    }
+
+
+    document
+        .getElementById("storyBtn")
+        .addEventListener("click", function () {
+
+            this.style.display = "none";
+
+            document
+                .getElementById("message")
+                .style.display = "block";
+
+            showMessage(0);
+
+        });
+
+
+    /* =========================================
+       BTS SECTION
+    ========================================= */
+
+    function showBTSSection() {
+
+        const section =
+            document.getElementById("btsSection");
+
+        section.style.display = "block";
+
+        section.animate(
+            [
+                {
+                    opacity: 0,
+                    transform: "translateY(50px)"
+                },
+                {
+                    opacity: 1,
+                    transform: "translateY(0)"
+                }
+            ],
+            {
+                duration: 1200,
+                fill: "forwards"
+            }
+        );
+
+        confettiBurst(120);
+
+        setTimeout(() => {
+
+            section.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }, 500);
+
+    }
+
+
+    /* =========================================
+       CONFETTI
+    ========================================= */
+
+    function confettiBurst(amount) {
+
+        const symbols = [
+            "💜",
+            "✨",
+            "💫",
+            "⭐",
+            "♡",
+            "✦"
+        ];
+
+        for (let i = 0; i < amount; i++) {
+
+            const confetti =
+                document.createElement("div");
+
+            confetti.className =
+                "confetti";
+
+            confetti.innerText =
+                symbols[
+                    Math.floor(
+                        Math.random() *
+                        symbols.length
+                    )
+                ];
+
+            confetti.style.left =
+                Math.random() * 100 + "vw";
+
+            confetti.style.fontSize =
+                10 + Math.random() * 16 + "px";
+
+            confetti.style.animationDuration =
+                2 + Math.random() * 4 + "s";
+
+            confetti.style.animationDelay =
+                Math.random() * .8 + "s";
+
+            document.body.appendChild(confetti);
+
+            setTimeout(() => {
+                confetti.remove();
+            }, 7000);
+
+        }
+
+    }
+
+
+    /* =========================================
+       FLOATING HEARTS
+    ========================================= */
+
+    function createHeart() {
+
+        const heart =
+            document.createElement("div");
+
+        heart.className = "heart";
+
+        heart.innerText =
+            Math.random() > .5
+            ? "💜"
+            : "♡";
+
+        heart.style.left =
+            Math.random() * 100 + "vw";
+
+        heart.style.fontSize =
+            15 + Math.random() * 20 + "px";
+
+        heart.style.setProperty(
+            "--drift",
+            (-80 + Math.random() * 160) + "px"
+        );
+
+        heart.style.animationDuration =
+            5 + Math.random() * 5 + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 11000);
+
+    }
+
+    setInterval(createHeart, 1200);
+
+
+    window.addEventListener("resize", () => {
+
+        if (window.innerWidth < 500) {
+
+            document
+                .querySelectorAll(".balloon")
+                .forEach(balloon => {
+
+                    balloon.style.transform =
+                        "scale(.9)";
+
+                });
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
+```
